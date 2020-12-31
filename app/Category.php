@@ -9,4 +9,9 @@ class Category extends Model
     protected $fillable = [
         'title'
     ];
+
+    public function news_categories()
+    {
+        return $this->belongsTo('App\News');
+    }
 }

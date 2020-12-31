@@ -19,5 +19,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('news/create', 'NewsController@create');
-Route::post('news', 'NewsController@store');
+Route::get('news/create', 'NewsController@create')->name('create');
+Route::post('news', 'NewsController@store')->name('store');
+
+Route::get('category/create', 'CategoryController@create')->name('createcat');
+Route::post('category', 'CategoryController@store')->name('storecat');
+
+Route::get('tag/create', 'TagController@create')->name('createtag');
+Route::post('tag', 'TagController@store')->name('storetag');
